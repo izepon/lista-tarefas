@@ -1,0 +1,235 @@
+/*Cabeçalho e título*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;    
+    font-family: 'Fira mono', 'Ubuntu Mono', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #a5d2f7a9;
+    color: #104f5c;
+    font-size: 18px;
+}
+
+#titulo {
+    margin: 0 auto;
+    width: 100%;;
+    max-width: 750px;
+    margin-top: 30px;
+    margin-bottom: 10px;    
+    border-radius: 12px;   
+    text-align: center;
+    background-color: #1cd6cd;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 20px;
+}
+/*Conteúdo da página e lista de tarefas*/
+.conteudo {
+    margin: 0 auto;
+    width: 100%;;
+    max-width: 650px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background: #fbf6f1;
+    padding: 60px;
+    border-radius: 12px;
+}
+
+.topo {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 35px;     
+}
+
+.topo input {
+    width: 89%;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    padding: 0.5rem;
+    background-color: #fbf6f1;
+    border-radius: 0.5rem;
+    border: none;
+    color:#1c6979 ;
+    box-shadow: 0px 5px 10px #49496157;
+    outline: none;
+}
+
+.topo button {
+    display: inline-block;
+    text-align: right;
+    padding: 18px;
+    background-color: #1cd6cd;
+    transition: 0.3s;
+    border-radius: 8px;
+    border: none;
+    color: #fbf6f1;
+    outline: none;
+    box-shadow: 0px 5px 10px #49496157;
+}
+
+.topo button:hover {
+    background: #179992;
+    cursor: pointer;
+}
+
+#listaTarefas {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaTarefas li {
+    padding: 20px;
+    background: #191818;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    line-height: 2rem;
+    padding: .5rem;
+    background-color: #fbf6f1;
+    border-radius: .5rem;
+    border: none;
+    color:#1c6979 ;
+    box-shadow: 0px 5px 10px #49496157;
+}
+
+.btnAcao {
+    border-radius: 20px;
+    /* border: 1px solid #179992; */
+    border: none;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    cursor: pointer;
+    background: #1cd6cd;
+    color: #FFF;
+    outline: none;
+    box-shadow: 0px 5px 10px #49496157;
+}
+
+.btnAcao:hover {
+    background: #179992;
+}
+
+.textoTarefa {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+}
+/*Edição da lista de tarefas*/
+#janelaEdicao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fbf6f1;
+    box-shadow: 0px 5px 10px #49496157;
+    width: 415px;
+    border-radius: 12px;
+    z-index: 200;
+    display: none;
+}
+
+#janelaEdicao.abrir {
+    display: block !important;
+}
+
+#janelaEdicaoFundo {
+    position: fixed;
+    top: 0;
+    background-color: #fbf6f1;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: 100;
+    right: 0;
+    display: none;
+}
+
+#janelaEdicaoFundo.abrir {
+   display: block !important;    
+}
+
+#janelaEdicaoBtnFechar {
+    position: absolute;
+    top: -25px;
+    right: -18px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #179992;
+    background-color: #1cd6cd;
+    color: #FFF;
+    outline: none;
+}
+
+#janelaEdicaoBtnFechar:hover{
+    background: #179992;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.frm-linha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.frm-linha label {
+    margin-bottom: 7px;
+}
+
+.frm-linha input {
+    padding: 15px;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: 0px 5px 10px #49496157;
+    font-size: 1.2rem;
+    background: #fbf6f1;
+    color: #FFF;
+    border: none;
+}
+
+.frm-linha button {
+    background: #fbf6f1;
+    box-shadow: 0px 5px 10px #49496157;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: #1cd6cd;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+}
+
+.frm-linha button:hover {
+    color: white;
+    background: #179992;
+} 
+
+/*Footer e créditos*/
+
+footer p {
+    margin: 0 auto;
+    width: 100%;;
+    max-width: 750px;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    border-radius: 12px;   
+    text-align: center;
+    background-color: #1cd6cd;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 20px;
+}
