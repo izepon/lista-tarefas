@@ -58,10 +58,34 @@ function gerarId() {
 }
 
 function adicionarTarefa(tarefa) {
-    let li = criarTagLI(tarefa);
-    listaTarefas.appendChild(li);  
-    inputNovaTarefa.value = '';  
+    let li = criarTagLI(tarefa);    
+    listaTarefas.appendChild(li);
+    // armazenaTarefa({tarefa: inputNovaTarefa.value, id: gerarId(),});  
+    inputNovaTarefa.value = '';
+    // recuperarTarefas();
+         
 }
+
+// function armazenaTarefa(tarefa) {
+//     let tarefas;
+//     if(localStorage.getItem("tarefas") == null){
+//         tarefas = [];
+//     } else {
+//         tarefas = JSON.parse(localStorage.getItem("tarefas"));
+//     }
+//     tarefas.push(tarefa);
+//     localStorage.setItem("tarefas", JSON.stringify(tarefas));
+// }
+
+// function recuperarTarefas() {
+//     let listaTarefas = localStorage.getItem("tarefas");
+//     if(listaTarefas) {
+//         let tarefas = JSON.parse(listaTarefas);
+//         for (const tarefa of tarefas) {
+//             adicionarTarefa(tarefa, false);
+//         }
+//     }
+// }
 
 function criarTagLI(tarefa) {
 
